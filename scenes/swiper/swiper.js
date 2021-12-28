@@ -14,6 +14,7 @@ const Swiper = ({ setShowOnBoarding }) => {
             containerStyles={{ padding: 20 }}
             bottomBarHeight={100}
             showDone={true}
+            imageContainerStyles={{ paddingBottom: 20 }}
             DoneButtonComponent={props => <Text onPress={() => setShowOnBoarding(false)} style={styles.icon}> <Ionicons name="arrow-forward-circle" size={28} color="black" /></Text>}
             pages={[
                 {
