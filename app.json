@@ -20,10 +20,10 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.ghaboor.market",
+      "package": "com.market.market",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0000ffff"
       }
     },
     "web": {
