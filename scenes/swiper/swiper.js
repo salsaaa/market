@@ -1,7 +1,8 @@
-import { Image } from "react-native";
+import { Image, Text } from "react-native";
 import Onboarding from 'react-native-onboarding-swiper';
-import { Animated } from "react-native-web";
+import { Animated, TouchableOpacity, View } from "react-native-web";
 import styles from "./swiper-style";
+import { Ionicons } from '@expo/vector-icons';
 
 const Swiper = ({ setShowOnBoarding }) => {
     return (
@@ -12,6 +13,8 @@ const Swiper = ({ setShowOnBoarding }) => {
             bottomBarColor='#F1F1F1'
             containerStyles={{ padding: 20 }}
             bottomBarHeight={100}
+            showDone={true}
+            DoneButtonComponent={props => <Text onPress={() => setShowOnBoarding(false)} style={styles.icon}> <Ionicons name="arrow-forward-circle" size={28} color="black" /></Text>}
             pages={[
                 {
                     backgroundColor: '#F1F1F1',
