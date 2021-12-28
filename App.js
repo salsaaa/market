@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import Navigator from './navigations/index'
+import Swiper from './scenes/swiper/swiper';
+import { useState } from 'react';
 export default function App() {
+  const [showOnBoarding, setShowOnBoarding] = useState(true)
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      {showOnBoarding ?
+        <Swiper setShowOnBoarding={setShowOnBoarding} />
+        :
+        <Navigator />
+      }
+    </>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+} 
